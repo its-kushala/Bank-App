@@ -1,9 +1,14 @@
 package guis;
 
+import db_objs.User;
+
 import javax.swing.*;
 
 public abstract class BaseFrame extends JFrame {
-    public BaseFrame(String title){
+    protected User user;
+    public BaseFrame(String title){initialize(title);}
+    public BaseFrame(String title, User user){
+        this.user = user;
         initialize(title);
     }
 
